@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+.main-content.closed {
+    margin-left: 60px; /* Adjust margin when side nav is closed */
+}
+
+section {
+    padding: 60px 20px;
+    height: 100vh; /* Full viewport height */
+    border-bottom: 1px solid #ddd;
+}
