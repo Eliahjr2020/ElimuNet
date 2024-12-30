@@ -82,6 +82,7 @@ body {
     align-items: center;
     padding: 10px 15px;
     transition: 0.5s;
+    z-index: 1000; /* Higher z-index to stay on top */
 }
 
 .topnav.closed {
@@ -120,7 +121,6 @@ body {
     margin-right: 16px;
     border: none;
     font-size: 17px;
-    background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/search.svg') no-repeat 10px center;
     padding-left: 40px; /* Add space for the icon */
 }
 
@@ -135,17 +135,11 @@ body {
     margin-left: 60px; /* Adjust margin when side nav is closed */
 }
 
-section {
-    padding: 60px 20px;
-    height: 100vh; /* Full viewport height */
-    border-bottom: 1px solid #ddd;
-}
-
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 3px 0;
     position: fixed;
     bottom: 0;
     width: calc(100% - 250px); /* Adjust width to account for side nav */
