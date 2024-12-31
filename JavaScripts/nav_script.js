@@ -41,6 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(error => console.error('Error loading content:', error));
     }
 
+    function loadSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+            mainContent.innerHTML = section.outerHTML;
+        }
+    }
+
     sideLinks.forEach(function(link) {
         link.addEventListener('click', function() {
             setActiveLink(sideLinks, this);
@@ -54,6 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             setActiveLink(topLinks, this);
             setActiveLink(sideLinks, null);
+            var sectionId = this.getAttribute('data-section');
+            if (sectionId === 'sign_in') {
+                loadContent('sign_in.html');
+            } else {
+                loadSection(sectionId);
+            }
         });
     });
 
@@ -79,5 +92,32 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             footer.style.display = "none";
         }
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.getElementById('contactForm');
+    var faqQuestions = document.querySelectorAll('.faq-question');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Your message has been sent successfully!');
+        // Here you can add code to handle the form submission, such as sending the data to a server
+    });
+
+    faqQuestions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            var answer = this.nextElementSibling;
+            var arrow = this.querySelector('.arrow');
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                arrow.innerHTML = '&#9660;';
+            } else {
+                answer.style.display = 'block';
+                arrow.innerHTML = '&#9650;';
+            }
+        });
     });
 });

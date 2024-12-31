@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help and Support - ElimuNet</title>
+    <link rel="stylesheet" href="./CSS/HelpStyle.css">
+</head>
+<body>
+    <div class="help-container">
+        <h1>Help and Support</h1>
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <h3 class="faq-question">How do I sign up? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">To sign up, click on the "Sign Up" link at the top of the page and fill out the registration form.</p>
+            </div>
+            <div class="faq">
+                <h3 class="faq-question">How do I reset my password? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">If you have forgotten your password, click on the "Forgot Password" link on the sign-in page and follow the instructions.</p>
+            </div>
+            <div class="faq">
+                <h3 class="faq-question">How do I upgrade to the Pro plan? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">To upgrade to the Pro plan, go to the Subscription page and click on the "Upgrade to Pro" button.</p>
+            </div>
+            <div class="faq">
+                <h3 class="faq-question">What resources are available in the Free plan? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">The Free plan provides access to basic resources, community support, and limited downloads.</p>
+            </div>
+            <div class="faq">
+                <h3 class="faq-question">What resources are available in the Pro plan? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">The Pro plan provides access to all resources, priority support, unlimited downloads, and exclusive content.</p>
+            </div>
+            <div class="faq">
+                <h3 class="faq-question">How can I contact support? <span class="arrow">&#9660;</span></h3>
+                <p class="faq-answer">You can contact support by filling out the contact form in the "Contact Support" section below.</p>
+            </div>
+            <!-- Add more FAQs as needed -->
+        </div>
+        <div class="contact-section">
+            <h2>Contact Support</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>    
+        document.addEventListener('DOMContentLoaded', function() {
+        var contactForm = document.getElementById('contactForm');
+        var faqQuestions = document.querySelectorAll('.faq-question');
+    
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your message has been sent successfully!');
+            // Here you can add code to handle the form submission, such as sending the data to a server
+        });
+    
+        faqQuestions.forEach(function(question) {
+            question.addEventListener('click', function() {
+                var answer = this.nextElementSibling;
+                var arrow = this.querySelector('.arrow');
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    arrow.innerHTML = '&#9660;';
+                } else {
+                    answer.style.display = 'block';
+                    arrow.innerHTML = '&#9650;';
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
