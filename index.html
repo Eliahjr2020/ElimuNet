@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ElimuNet</title>
-        <link rel="stylesheet" href="./CSS/NavigationsStyle.css">
-        <link rel="stylesheet" href="./CSS/style.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    </head>
-
-    <body>
-        <!-- Side Navigation -->
-        <div class="sidenav" id="mySidenav">
-            <a href="javascript:void(0)" class="closebtn"
-                onclick="closeNav()">&times;</a>
-            <div class="logo">
-                <img src="./Assets/logo.png" alt="Logo" class="logo-img">
-                <span>ElimuNet</span>
-            </div>
-            <a href="#dashboard"><i class="fas fa-tachometer-alt"></i>
-                Dashboard</a>
-            <a href="#syllabus"><i class="fas fa-book"></i> Syllabus</a>
-            <a href="#scheme"><i class="fas fa-list-alt"></i> Scheme of Work</a>
-            <a href="#lesson"><i class="fas fa-chalkboard-teacher"></i> Lesson
-                Plan</a>
-            <a href="#books"><i class="fas fa-book-open"></i> Books</a>
-            <a href="#notes"><i class="fas fa-sticky-note"></i> Study Notes</a>
-            <a href="#pastpapers"><i class="fas fa-file-alt"></i> Pastpapers</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ElimuNet</title>
+    <link rel="stylesheet" href="./CSS/NavigationsStyle.css">
+    <link rel="stylesheet" href="./CSS/DashboardStyle.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+       <!-- Side Navigation -->
+       <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="logo">
+            <img src="./Assets/logo.png" alt="Logo" class="logo-img">
+            <span>ElimuNet</span>
         </div>
+        <a href="javascript:void(0)" class="side-link" data-file="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="javascript:void(0)" class="side-link" data-file="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="javascript:void(0)" class="side-link" data-file="subscription.html"><i class="fas fa-list-alt"></i> Subscription</a>
+        <a href="javascript:void(0)" class="side-link" data-file="settings.html"><i class="fas fa-cogs"></i> Settings</a>
+        <a href="javascript:void(0)" class="side-link" data-file="notification.html"><i class="fas fa-bell"></i> Notifications</a>
+        <a href="javascript:void(0)" class="side-link" data-file="help.html"><i class="fas fa-question-circle"></i> Help/Support</a>
+        <a href="javascript:void(0)" class="side-link" data-file="sign_up.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+    </div>
 
-        <!-- Top Navigation -->
-        <div class="topnav">
-            <a href="javascript:void(0)" class="openbtn"
-                onclick="openNav()">&#9776;</a>
-            <div class="nav-links">
-                <a class="active" href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <a href="#team">Our Team</a>
-                <a href="#faqs">FAQs</a>
-                <a href="#login">Login/Register</a>
-                <input type="text" placeholder="Search..">
-            </div>
+    <!-- Top Navigation -->
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0)" class="openbtn" onclick="openNav()">&#9776;</a>
+        <div class="nav-links">
+            <a href="javascript:void(0)" class="active top-link" data-section="home">Home</a>
+            <a href="javascript:void(0)" class="top-link" data-section="about">About</a>
+            <a href="javascript:void(0)" class="top-link" data-section="team">Our Team</a>
+            <a href="javascript:void(0)" class="top-link" data-section="contact">Contact</a>
+            <a href="javascript:void(0)" class="top-link" data-section="faqs">FAQs</a>
+            <input type="text" placeholder="Search..">
         </div>
+    </div>
+
 
         <div class="main-content" id="mainContent">
             <section id="home">
@@ -111,42 +105,6 @@
                 </div>
             </section>
 
-            <section id="contact">
-                <div class="contact-container">
-                    <div class="contact-form">
-                        <h2>Contact Us</h2>
-                        <form>
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required>
-
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email"
-                                required>
-
-                            <label for="comment">Comment:</label>
-                            <textarea id="comment" name="comment" rows="4"
-                                required></textarea>
-
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
-                    <div class="contact-info">
-                        <h2>Get in Touch</h2>
-                        <p>Email: your-email@example.com</p>
-                        <p>Phone: +123 456 7890</p>
-                        <div class="social-media">
-                            <a href="https://facebook.com" target="_blank"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://twitter.com" target="_blank"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a href="https://linkedin.com" target="_blank"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a href="https://instagram.com" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section id="team">
                 <div class="team-container">
@@ -184,6 +142,45 @@
                     </div>
                 </div>
             </section>
+
+
+            <section id="contact">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <h2>Contact Us</h2>
+                        <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"
+                                required>
+
+                            <label for="comment">Comment:</label>
+                            <textarea id="comment" name="comment" rows="4"
+                                required></textarea>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>Email: your-email@example.com</p>
+                        <p>Phone: +123 456 7890</p>
+                        <div class="social-media">
+                            <a href="https://facebook.com" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com" target="_blank"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
             <section id="faqs">
                 <div class="faqs-container">
@@ -234,8 +231,8 @@
             <p>&copy; 2023 ElimuNet. All rights reserved.</p>
         </footer>
 
-        <script src="./JavaScripts/nav_script.js"></script>
-        <script src="./JavaScripts/main_scripts.js"></script>
+<script src="./JavaScripts/nav_script.js"></script>
+
     </body>
 
 </html>

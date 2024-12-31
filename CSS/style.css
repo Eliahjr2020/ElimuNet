@@ -76,6 +76,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-block: 0 10px;
+    padding-inline: 15px;
 }
 
 .hero-text p {
@@ -341,4 +343,19 @@ section {
     color: #666;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* Add responsive breakpoints */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-header {
+        grid-column: span 1;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
 }

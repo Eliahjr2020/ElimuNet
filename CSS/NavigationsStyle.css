@@ -110,7 +110,7 @@ body {
     color: black;
 }
 
-.topnav a.active {
+.side-link.active, .top-link.active {
     background-color: #4CAF50; /* Change to your desired active color */
     color: white;
 }

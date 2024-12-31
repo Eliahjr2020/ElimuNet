@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.signup-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-container h1 {
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    transition: background 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #1e7e34;
+}
+
+.social-signup {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.social-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.social-btn.google {
+    background-color: #db4437;
+}
+
+.social-btn.google:hover {
+    background-color: #c23321;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn.facebook:hover {
+    background-color: #2d4373;
+}
+
+.social-btn.twitter {
+    background-color: #1da1f2;
+}
+
+.social-btn.twitter:hover {
+    background-color: #0d95e8;
+}
+
+.social-btn.instagram {
+    background-color: #e4405f;
+}
+
+.social-btn.instagram:hover {
+    background-color: #d32e4e;
+}
+
+p {
+    margin-top: 20px;
+}
